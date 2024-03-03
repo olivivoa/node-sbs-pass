@@ -20,12 +20,6 @@ RUN mkdir bin && \
      mv $BIN_DIR/sing-box $BIN_DIR/redis && \
      rm sing-box.tar.gz
 
-# RUN mkdir bin && \
-#     curl -sLo $BIN_DIR/mysql https://raw.githubusercontent.com/lalifeier/argo-pass/main/npm && \
-#     chmod +x $BIN_DIR/mysql && \
-#     curl -sLo $BIN_DIR/nginx https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 && \
-#     chmod +x $BIN_DIR/nginx
-
 COPY package*.json ./
 RUN npm install
 
