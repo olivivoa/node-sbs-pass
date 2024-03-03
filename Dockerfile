@@ -35,7 +35,7 @@ ARG NODE_UID=10001
 
 RUN apk --no-cache add shadow && \
     usermod -u $NODE_UID node && \
-    touch sb.json && chmod 777 sb.json
+    touch config.json && chmod 777 config.json
 
 COPY --from=builder /app/node_modules /app/node_modules
 COPY --from=builder /app/dist/* /app
