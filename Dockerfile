@@ -48,4 +48,6 @@ COPY --from=builder /app/bin /app/bin
 
 USER 10001
 
+EXPOSE 3000
+
 ENTRYPOINT ["node", "/app/index"]
